@@ -1,0 +1,1557 @@
+
+<!-- saved from url=(0050)https://www-npa.lip6.fr/~malouch/M2/ITQoS/TME1.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><script src="chrome-extension://mfidniedemcgceagapgdekdbmanojomk/js/elephant.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 14">
+<meta name="Originator" content="Microsoft Word 14">
+<link rel="File-List" href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/TME1_fichiers/filelist.xml">
+<link rel="Preview" href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/TME1_fichiers/preview.wmf">
+<link rel="Edit-Time-Data" href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/TME1_fichiers/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>TME1 : ITQoS</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Subject>Projet MMQoS RDT, pertes et FEC</o:Subject>
+  <o:Author>Naceur Malouch</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>NM</o:LastAuthor>
+  <o:Revision>10</o:Revision>
+  <o:TotalTime>3910</o:TotalTime>
+  <o:LastPrinted>2019-09-26T11:12:00Z</o:LastPrinted>
+  <o:Created>2020-09-30T16:46:00Z</o:Created>
+  <o:LastSaved>2020-09-30T17:49:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>2496</o:Words>
+  <o:Characters>13734</o:Characters>
+  <o:Manager>Naceur Malouch</o:Manager>
+  <o:Company>LIP6 UPMC</o:Company>
+  <o:Lines>114</o:Lines>
+  <o:Paragraphs>32</o:Paragraphs>
+  <o:CharactersWithSpaces>16198</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel="themeData" href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/TME1_fichiers/themedata.thmx">
+<link rel="colorSchemeMapping" href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/TME1_fichiers/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>FR</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>AR-SA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:UnderlineTabInNumList/>
+   <w:HangulWidthLikeWW11/>
+   <w:UseNormalStyleForList/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="0" Name="header"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-134238209 -371195905 63 0 4129279 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+	{font-family:NewCenturySchlbk;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-134238209 -371195905 63 0 4129279 0;}
+@font-face
+	{font-family:Thorndale;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"Andale Sans UI";
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Titre 1 Car";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Titre 2 Car";
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:normal;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Titre 3 Car";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	display:none;
+	mso-hide:all;
+	font-weight:normal;}
+h4
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Titre 4 Car";
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-link:"En-tête Car";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 241.0pt right 17.0cm;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .25pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 0cm 0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"Pied de page Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 8.0cm right 16.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	tab-stops:153.0pt center 240.95pt;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Corps de texte Car";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Retrait corps de texte Car";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-text-animation:blink-background;
+	display:none;
+	mso-hide:all;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Corps de texte 2 Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	mso-style-parent:"";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Texte brut Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Texte de bulles Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.Titre1Car
+	{mso-style-name:"Titre 1 Car";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Titre 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Titre2Car
+	{mso-style-name:"Titre 2 Car";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Titre 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Titre3Car
+	{mso-style-name:"Titre 3 Car";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Titre 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Titre4Car
+	{mso-style-name:"Titre 4 Car";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Titre 4";
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	text-decoration:underline;
+	text-underline:single;}
+span.En-tteCar
+	{mso-style-name:"En-tête Car";
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:En-tête;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.PieddepageCar
+	{mso-style-name:"Pied de page Car";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Pied de page";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+span.TitreCar
+	{mso-style-name:"Titre Car";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-weight:bold;}
+span.CorpsdetexteCar
+	{mso-style-name:"Corps de texte Car";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Corps de texte";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+span.RetraitcorpsdetexteCar
+	{mso-style-name:"Retrait corps de texte Car";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Retrait corps de texte";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+span.Corpsdetexte2Car
+	{mso-style-name:"Corps de texte 2 Car";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Corps de texte 2";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+span.TextebrutCar
+	{mso-style-name:"Texte brut Car";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Texte brut";
+	mso-ansi-font-size:10.5pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-hansi-font-family:Consolas;
+	mso-bidi-font-family:Consolas;}
+span.TextedebullesCar
+	{mso-style-name:"Texte de bulles Car";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Texte de bulles";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+p.Style1, li.Style1, div.Style1
+	{mso-style-name:Style1;
+	mso-style-unhide:no;
+	mso-style-parent:"Texte brut";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0cm;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:10.0pt;
+	font-family:"Arial Unicode MS","sans-serif";
+	mso-fareast-font-family:"MS Mincho";}
+p.question, li.question, div.question
+	{mso-style-name:question;
+	mso-style-unhide:no;
+	mso-style-parent:"Texte brut";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:27.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-27.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial Unicode MS","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	font-style:italic;}
+p.Commentaires, li.Commentaires, div.Commentaires
+	{mso-style-name:Commentaires;
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:21.0pt;
+	margin-bottom:0cm;
+	margin-left:26.95pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"NewCenturySchlbk","serif";
+	mso-fareast-font-family:"Arial Unicode MS";
+	mso-bidi-font-family:"Arial Unicode MS";
+	display:none;
+	mso-hide:all;}
+p.Rponse, li.Rponse, div.Rponse
+	{mso-style-name:Réponse;
+	mso-style-unhide:no;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:#DFDFDF;
+	mso-shading:windowtext;
+	mso-pattern:gray-125 auto;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	display:none;
+	mso-hide:all;}
+p.TableContents, li.TableContents, div.TableContents
+	{mso-style-name:"Table Contents";
+	mso-style-unhide:no;
+	mso-style-parent:"Corps de texte";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:no-line-numbers;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Thorndale","serif";
+	mso-fareast-font-family:"Andale Sans UI";
+	mso-bidi-font-family:"Times New Roman";}
+p.TableHeading, li.TableHeading, div.TableHeading
+	{mso-style-name:"Table Heading";
+	mso-style-unhide:no;
+	mso-style-parent:"Table Contents";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:no-line-numbers;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Thorndale","serif";
+	mso-fareast-font-family:"Andale Sans UI";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+p.rponse0, li.rponse0, div.rponse0
+	{mso-style-name:réponse;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:28.3pt;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:#DFDFDF;
+	mso-shading:windowtext;
+	mso-pattern:gray-125 auto;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0cm;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	display:none;
+	mso-hide:all;
+	mso-ansi-language:EN-US;}
+p.tudiant, li.tudiant, div.tudiant
+	{mso-style-name:étudiant;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0cm;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.tudiantCar
+	{mso-style-name:"étudiant Car";
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-ansi-font-size:12.0pt;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("TME1_fichiers/header.htm") fs;
+	mso-footnote-continuation-separator:url("TME1_fichiers/header.htm") fcs;
+	mso-endnote-separator:url("TME1_fichiers/header.htm") es;
+	mso-endnote-continuation-separator:url("TME1_fichiers/header.htm") ecs;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:39.7pt 2.0cm 53.95pt 2.0cm;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-footer:url("TME1_fichiers/header.htm") f1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tableau Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#D6E3BC" lang="FR" link="blue" vlink="purple" style="tab-interval:
+35.45pt" data-new-gr-c-s-check-loaded="14.1219.0" data-gr-ext-installed="">
+
+<div class="WordSection1">
+
+<div style="mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt">
+
+<p class="MsoHeader" align="center" style="margin:0cm;margin-bottom:.0001pt;
+text-align:center;border:none;mso-border-alt:solid windowtext .5pt;padding:
+0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span style="mso-bidi-font-size:
+11.0pt;mso-bidi-font-weight:bold;font-style:normal;mso-no-proof:yes">2024 –
+2025</span><span style="font-size:12.0pt;mso-bidi-font-size:14.0pt;mso-bidi-font-weight:
+bold;font-style:normal;mso-no-proof:yes"> <o:p></o:p></span></p>
+
+<p class="MsoHeader" align="center" style="margin:0cm;margin-bottom:.0001pt;
+text-align:center;border:none;mso-border-alt:solid windowtext .5pt;padding:
+0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;mso-bidi-font-size:14.0pt;font-style:
+normal;mso-no-proof:yes">Sorbonne Université, Master 2<sup>e</sup><span style="mso-spacerun:yes">&nbsp; </span>informatique, spécialité réseaux<o:p></o:p></span></b></p>
+
+<p class="MsoHeader" align="center" style="margin:0cm;margin-bottom:.0001pt;
+text-align:center;border:none;mso-border-alt:solid windowtext .5pt;padding:
+0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:13.0pt;mso-bidi-font-size:14.0pt;font-style:
+normal;mso-no-proof:yes">Travaux sur Machines Encadrés 1 UE ITQoS <o:p></o:p></span></b></p>
+
+<p class="MsoHeader" align="center" style="margin:0cm;margin-bottom:.0001pt;
+text-align:center;border:none;mso-border-alt:solid windowtext .5pt;padding:
+0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span style="font-size:12.0pt;
+mso-bidi-font-size:14.0pt;font-style:normal;mso-no-proof:yes">QoE<o:p></o:p></span></p>
+
+<p class="MsoHeader" align="center" style="margin:0cm;margin-bottom:.0001pt;
+text-align:center;border:none;mso-border-alt:solid windowtext .5pt;padding:
+0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span style="color:red;mso-no-proof:
+yes"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Image_x0020_1" o:spid="_x0000_i1026" type="#_x0000_t75"
+ style='width:11pt;height:6.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="TME1_fichiers/image001.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img width="22" height="13" src="./TME1 _ ITQoS_files/image002.jpg" v:shapes="Image_x0020_1"><!--[endif]--></span><span style="color:red"><span style="mso-spacerun:yes">&nbsp;</span></span><span style="font-size:9.0pt;color:red;mso-bidi-font-style:italic;mso-no-proof:yes">À
+Rendre&nbsp;: Compte rendu électronique (pdf)</span><span style="font-size:
+12.0pt;mso-bidi-font-size:14.0pt;font-style:normal;mso-no-proof:yes"><o:p></o:p></span></p>
+
+</div>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b>Rappels<o:p></o:p></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><o:p>&nbsp;</o:p></b></p>
+
+<p class="MsoNormal" style="text-align:justify">Le terme de qualité de service (<span class="SpellE">QoS</span>) est largement utilisé aujourd'hui, non seulement dans
+le monde des opérateurs de télécommunication dans lequel il a ses racines, mais
+de plus en plus dans les services multimédia filaire et sans fil basés sur le
+protocole IP. Les réseaux et les systèmes sont progressivement conçus en tenant
+compte des performances de bout en bout requises par les applications
+utilisateur. Cependant, le terme <span class="SpellE">QoS</span> n'est
+généralement pas bien défini, est utilisé de manière vague ou, pire encore, mal
+utilisé.</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/lecture1/sld13.htm" title="CR 1 : Définition de la QoS">La qualité de service (<span class="SpellE">QoS</span>)
+est définie</a> dans la Recommandation <a href="https://www.itu.int/rec/dologin_pub.asp?lang=f&amp;id=T-REC-E.800-200809-I!!PDF-F&amp;type=items" title="Le pdf de la recommandation E.800 : Définition des termes relatifs à la qualité de service">UIT-T
+E.800</a> comme étant l'effet collectif des performances qui détermine le degré
+de satisfaction d'un utilisateur du service. En général, la qualité de service
+est mesurée de manière objective. Dans les réseaux, la qualité de service est
+généralement une mesure de la performance des transmissions fournies par le
+réseau. Les mécanismes de qualité de service incluent tout mécanisme qui
+contribue à améliorer les performances globales du système et donc à améliorer
+l'expérience de l'utilisateur final. Les mécanismes de qualité de service
+peuvent être mis en œuvre à différents niveaux. Par exemple, au niveau de la
+couche réseau, les mécanismes de qualité de service incluent des mécanismes de
+gestion du trafic tels que la mise en mémoire tampon et la planification des transmissions
+utilisée pour différencier le trafic appartenant à différentes applications.
+D'autres mécanismes de qualité de service à des niveaux autres que le transport
+incluent la dissimulation de perte, la correction d'erreur directe (FEC), etc.</p>
+
+<p class="MsoNormal" style="text-align:justify">Les paramètres de qualité de
+service sont utilisés pour décrire la qualité de service observée et peuvent
+être à leur tour définis sur différentes couches. </p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Le terme "qualité de
+service" devrait normalement couvrir les aspects techniques et non
+techniques affectant un service. Différents concepts et orientations ont été
+développés pour couvrir divers intérêts et points de vue de toutes les parties
+du marché des services de télécommunication, à savoir les utilisateurs, les
+fournisseurs de services, les opérateurs de réseaux, les fabricants et les
+régulateurs. Dans de nombreux cas, l’intérêt est porté plus vers l'utilisateur
+et ses attentes en matière de qualité. Ces attentes peuvent varier en fonction
+des besoins de l’utilisateur mais aussi<span style="mso-spacerun:yes">&nbsp;
+</span>de sa perception personnelle du niveau de qualité atteint. Dans ce cas,
+les composants <i>subjectifs</i> ont un poids de plus en plus important et le
+terme "qualité de service" doit être étendu à la "qualité de
+l'expérience" avec une signification plus subjective.</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Le terme <a href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/lecture1/sld19.htm" title="CR 1 : QoE"><span class="SpellE">Quality</span> of <span class="SpellE">Experience</span>
+(<span class="SpellE">QoE</span>)</a> est actuellement utilisé pour souligner le
+caractère purement <i>subjectif</i> des évaluations de la qualité, et pour
+mettre l'accent sur le point de vue de l'utilisateur quant à la valeur globale
+du service fourni. L'importance accrue du terme <span class="SpellE">QoE</span>
+est liée au fait que, par le passé, le terme <span class="SpellE">QoS</span>
+était utilisé avec laxisme et principalement pour les concepts techniques axés
+uniquement sur les éléments du réseau. La définition de la qualité de service
+inclut toutefois le degré de satisfaction d'un utilisateur avec un service.
+Ainsi, des aspects non techniques sont inclus, comme par exemple
+l'environnement de l'utilisateur, ses attentes, la nature du contenu et son
+importance. Mais la plupart des fournisseurs de services n'utilisaient la
+qualité de service que par rapport à l'interaction directe entre le service et
+le réseau. Il y avait donc une forte focalisation sur la performance réelle du
+réseau et son influence immédiate sur les aspects perceptibles par les
+utilisateurs, tandis que des aspects subjectifs supplémentaires et non
+directement liés au service étaient omis.</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">La <span class="SpellE">QoE</span>
+est définie dans la Recommandation UIT-T P.10 / G.100 comme étant
+l'acceptabilité globale d'une application ou d'un service, telle qu'elle est
+perçue subjectivement par l'utilisateur final. Il inclut tous les effets
+système de bout en bout (client, terminal, réseau, infrastructure de service,
+etc.) et peut être influencé par les attentes et le contexte des utilisateurs.
+La <span class="SpellE">QoE</span> est donc mesurée de manière subjective par
+l'utilisateur final et peut différer d'un utilisateur à l'autre. Cependant,
+pour des raisons pratiques, il est souvent estimé en utilisant des mesures
+objectives.</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Les mesures objectives de la
+performance des services, telles que la perte ou le retard des informations,
+contribuent à la <span class="SpellE">QoE</span>. Ces mesures objectives peuvent
+être associées à des composantes humaines pouvant inclure des émotions, des
+antécédents linguistiques, une attitude ou une motivation, afin<span style="mso-spacerun:yes">&nbsp; </span>de déterminer l’acceptabilité globale du service
+par l’utilisateur final. </p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Par exemple, la <span class="SpellE">QoE</span> pour la vidéo peut être mesurée via <a href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/lecture1/sld23.htm" title="CR1 : Qualité subjective vidéo : Exemple">des tests subjectifs
+soigneusement contrôlés</a> (Recommandation UIT-R BT.500-11 et Recommandation
+UIT-R P.800) où les échantillons vidéo sont montrés aux spectateurs à qui on
+demande de les évaluer sur une échelle. La note attribuée à chaque cas est
+calculée en moyenne pour obtenir le score d'opinion moyen (MOS). Il s’agit
+d’une <span class="SpellE">QoE</span> subjective.</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">En général, il existe une
+corrélation entre la <span class="SpellE">QoE</span> subjective et divers
+métriques de performance. De plus, certains paramètres objectifs sont plus
+proches de l’utilisateur et peuvent décrire mieux l’interaction entre le
+service et l’utilisateur. En combinant tous ces paramètres on peut prédire la <span class="SpellE">QoE</span>, aussi sous forme d’un score MOS, de manière à ce
+qu’elle soit représentative de la <span class="SpellE">QoE</span> subjective. Il
+s’agit de la <span class="SpellE">QoE</span> objective. Les algorithmes de mesure
+de la <span class="SpellE">QoE</span> objective reposent<span style="mso-spacerun:yes">&nbsp; </span>notamment sur des hypothèses et des
+approximations et ils sont souvent calibrés par des expérimentations et des
+tests subjectifs. En raison de la complexité des services et les nombreux
+facteurs qui ont une influence sur la qualité, il n’existe pas de relation
+univoque qui autoriserait des déclarations telles que "Si la bande
+passante est augmentée de 200 kbit/s, alors l'utilisateur augmentera sa note de
+0.5 point".</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Pour garantir la qualité de
+service appropriée, des objectifs <span class="SpellE">QoE</span> doivent être
+définis pour chaque service et être inclus dès le début dans les processus de
+conception et d'ingénierie du système, où ils sont traduits en indicateurs de
+performance. En connaissant la <span class="SpellE">QoE</span> cible pour un
+utilisateur, on pourrait en déduire les performances à atteindre au niveau
+réseau et ainsi mieux optimiser les ressources utilisées du réseau.</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Une fois le réseau est opérationnel,
+les mesures continues de performance et de qualité permettent de veiller sur le
+bon fonctionnement du réseau et de vérifier que la qualité ciblée est atteinte.
+Les opérateurs réseaux utilisent souvent le terme KPI («&nbsp;Key Performance <span class="SpellE">Indicator</span>&nbsp;») pour désigner ces mesures de performance
+qui peuvent être simples comme un taux de perte, ou combinant plusieurs
+paramètres et métriques du réseau. Les <span class="SpellE">KPIs</span> peuvent
+être affichés simplement sur des écrans de contrôle ou traités de manière
+automatique afin de déclencher des alertes et éventuellement des actions de
+réparation.</p>
+
+<p class="MsoNormal" style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">A l’instar des <span class="SpellE">KPIs</span>, le terme KQI («&nbsp;Key <span class="SpellE">Quality</span>
+<span class="SpellE">Indicator</span>&nbsp;<span class="GramE">»&nbsp;)</span> a
+été défini récemment et commence à être utilisé pour désigner des mesures
+décrivant mieux le service offert par le réseau et observé par l’utilisateur,
+et non pas seulement les performances du réseau. Un KQI peut constituer seul,
+ou en le combinant avec d’autres paramètres, une mesure de <span class="SpellE">QoE</span>
+objective. Les <span class="SpellE">KQIs</span> sont appelées aussi indicateurs
+externes car ils prennent en compte d’autres paramètres à l’extérieur du
+réseau. Exemple&nbsp;: le nombre de pixels manquants dans une image vidéo. En
+particulier, l’organisation ETSI («&nbsp;<span class="SpellE">European</span> <span class="SpellE">Telecommuniations</span> Standards Institute&nbsp;») a essayé de
+regrouper, dans la série des spécifications <a href="https://www.etsi.org/deliver/etsi_ts/102200_102299/10225001/02.03.01_60/ts_10225001v020301p.pdf" title="TS 102 250-1 : Speech and multimedia Transmission Quality (STQ); QoS aspects for popular services in mobile networks; Part 1: Assessment of Quality of Service">TS
+102&nbsp;250-x</a>, plusieurs indicateurs de qualité pour les applications
+multimédia dans les réseaux mobiles.</p>
+
+<p class="MsoHeader" align="center" style="text-align:center;border:none;
+mso-padding-alt:0cm 0cm 0cm 0cm"><span style="font-size:12.0pt;mso-bidi-font-size:
+14.0pt;font-style:normal;mso-no-proof:yes"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoTitle"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoTitle">E-Model</p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">Consultez la recommandation <a href="https://www.itu.int/rec/dologin_pub.asp?lang=f&amp;id=T-REC-G.107-201506-I!!PDF-E&amp;type=items" title="pdf G.107">G.107 (06/2015)</a> de l’Union Internationale de
+Télécommunication (ITU) sur le site <a href="https://www.itu.int/">https://www.itu.int/</a>.
+Ensuite répondez aux questions suivantes&nbsp;:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">1 - Commencez par observer la figure de la page 3 du document (page 9
+du <span class="SpellE">pdf</span>), ensuite donnez l’équation principale de
+calcul du R-factor (R pour ‘transmission Rating’). Donnez brièvement le rôle
+des cinq termes du R-factor.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt">2 - Est-ce que le taux
+de perte des paquets audio est pris en compte dans ce calcul&nbsp;? Précisez
+dans quel terme de l’équation du R-factor. Même question pour le délai réseau
+de bout en bout.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">3 - Quelle est la valeur de R à partir de laquelle on considère que la
+qualité de la conversation téléphonique est&nbsp;: très bonne&nbsp;? <span class="GramE">acceptable</span>&nbsp;? (Page 16 du document ou page 22 du <span class="SpellE">pdf</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">4 - Que signifie MOS-CQE&nbsp;? <span class="SpellE">GoB</span>&nbsp;? <span class="SpellE">PoW</span>&nbsp;? Quelle est l’utilité de chaque estimateur&nbsp;?<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">5 - Calculez le MOS qui correspond à R=75.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt">6 - Le Tableau 3
+(Section 7.7) présente les valeurs par défaut du modèle. Entre autres, T=Ta=<span class="SpellE">Ie</span>= <span class="SpellE">Ppl</span>=0. Avec les paramètres
+par défaut R = 93.2 qui représente la qualité sans délai et sans perte entre
+les interlocuteurs. Ainsi, si on suppose qu’il n’y a pas d’échos ou qu’ils sont
+négligeables, on peut utiliser cette formule simplifiée du modèle&nbsp;:<span style="mso-spacerun:yes">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:141.8pt;text-indent:35.45pt"><span style="mso-bidi-font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">R<span style="mso-spacerun:yes">&nbsp; </span>=<span style="mso-spacerun:yes">&nbsp;
+</span>93.2<span style="mso-spacerun:yes">&nbsp; </span>–<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">Idd</span><span style="mso-spacerun:yes">&nbsp; </span>–<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">Ie-eff</span></span><span style="mso-bidi-font-size:10.0pt">.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:177.25pt;text-indent:35.45pt"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt">Calculez le R-factor
+pour un taux de perte égale à 0, <span class="SpellE">Ie</span>=0 et un délai
+T=Ta=50ms, 150ms, 300ms, et enfin 500ms. Interprétez les résultats.<span style="mso-spacerun:yes">&nbsp;&nbsp; </span><u>Indication</u>&nbsp;: Voir Section
+7.4<span style="mso-spacerun:yes">&nbsp; </span>et l’équation (7-27)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt">7 - Toujours avec la
+formule simplifiée, calculez le R-factor pour <span class="SpellE">Ppl</span>=1<span class="GramE">%&nbsp;,</span> 5% et 10%. On fixe T=Ta=150ms, <span class="SpellE">BurstR</span>=1
+(pas de pertes successives supplémentaires). On suppose que le codec utilisé
+est le G.729. Donc, <span class="SpellE">Ie</span>=11 et <span class="SpellE">Bpl</span>=19
+(Obtenues à partir de la recommandation ITU-T G.113). Interprétez les
+résultats.<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><u>Indication</u>&nbsp;:
+Voir Section 7.5 et l’équation (7-29)</span><span style="font-size:11.0pt;
+mso-bidi-font-size:12.0pt;color:gray"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><i><span style="mso-bidi-font-size:
+10.0pt">A noter que les recommandations <a href="https://www.itu.int/rec/T-REC-G.107.1-201906-I/fr" title="G.107.1 site ITU ">G.107.1 (06/2019)</a> et <a href="https://www.itu.int/rec/T-REC-G.107.2-201906-I/fr" title="G.107.2 FullBand E-Model ITU">G.107.2 (06/2019)</a><span style="mso-spacerun:yes">&nbsp; </span>ont mis à jour le E-model afin de prendre en
+compte les nouveaux types d’audio <span class="SpellE">wideband</span> et <span class="SpellE">fullband</span>. Néanmoins, les formules des différents termes
+n’ont pas radicalement changé.<span style="mso-spacerun:yes">&nbsp; </span>Toujours
+en cours d’actualisation.<o:p></o:p></span></i></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoTitle">PESQ</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">8 - Afin d’estimer la qualité d’une transmission audio en
+directe, plusieurs tests de qualité objective et subjective ont été effectués.
+Les valeurs MOS (<span class="SpellE">Mean</span> Opinion Score) obtenues sont
+résumées dans le graphique ci-dessous. Pour les tests objectifs, les
+algorithmes qui ont été utilisés sont MNB (<span class="SpellE">Measuring</span> <span class="SpellE">Normalizing</span> Block) variante 1 et 2, et PESQ (<span class="SpellE">Perceptual</span> Evaluation of Speech <span class="SpellE">Quality</span>).
+Chaque point sur le graphique correspond aux résultats des tests effectués sur
+les mêmes séquences audio. L’axe des ordonnées donne la valeur du MOS objectif
+pour l’algorithme concerné, et l’axe des abscisses donne la valeur du MOS
+subjectif.<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Image_x0020_2" o:spid="_x0000_i1025"
+ type="#_x0000_t75" style='width:233.5pt;height:130.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="TME1_fichiers/image003.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="467" height="261" src="./TME1 _ ITQoS_files/image004.jpg" v:shapes="Image_x0020_2"><!--[endif]--></span></p>
+
+<p class="MsoNormal"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class="MsoNormal"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>8.1 - Rappelez la
+procédure et le principe des tests <a href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/lecture1/sld22.htm">subjectifs</a> et <a href="https://www-npa.lip6.fr/~malouch/M2/ITQoS/lecture1/sld25.htm">objectifs</a>. </p>
+
+<p class="MsoNormal" style="margin-left:35.45pt;text-indent:-35.45pt"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>8.2 - Interprétez les résultats affichés sur
+le graphique en déduisant l’algorithme qu’il est conseillé d’utiliser pour les
+prochains tests objectifs. Justifiez votre réponse. Indication&nbsp;: À l’aide
+d’un outil graphique, tracez la diagonale, <span class="SpellE">c-à-d</span> la
+droite d’équation x=y. </p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">9 - Consultez le fichier <span class="SpellE">pdf</span> de la
+recommandation ITU P.862&nbsp;: «&nbsp;Evaluation de la qualité vocale
+perçue&nbsp;: méthode objective d’évaluation de la qualité vocale de bout en
+bout des codecs vocaux et des réseaux téléphoniques à bande étroite&nbsp;». Le
+fichier <span class="SpellE">pdf</span> se trouve dans le fichier .zip à récupérer
+à partir de ce lien <a href="https://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-P.862-200102-W!!SOFT-ZST-F&amp;type=items">http://www.itu.int/rec/T-REC-P.862-200102-I/fr</a>.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">Quelle est la note maximale pouvant être fournie par l’algorithme
+PESQ&nbsp;?<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">10 - A partir du fichier .zip à télécharger depuis <a href="https://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-P.862-200511-W!Amd2!SOFT-ZST-E&amp;type=items">http://www.itu.int/rec/T-REC-P.862-200511-I!Amd2/en</a>,
+extrayez et copiez le répertoire <span class="SpellE">conform</span> sur votre
+PC. Ensuite, écoutez le fichier audio <span class="SpellE">conform</span>/u_am1s01.wav,
+puis le fichier audio <span class="SpellE">conform</span>/u_am1s01b2c8.wav. Le
+deuxième fichier représente l’enregistrement du premier mais en subissant des
+dégradations. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">Donnez une note sous forme d’un nombre réel entre 1 et 5 afin d’estimer
+la qualité du fichier dégradé selon vous (Vous pouvez faire la moyenne de votre
+note et celle de votre binôme).<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">11 - Refaites le même test avec cette fois-ci le fichier <span class="SpellE">conform</span>/u_am1s01b2c1.wav.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">12 - A partir du même fichier .zip, extrayez et copiez le répertoire
+source sur votre PC. Ensuite, compilez, puis créez un exécutable nommé par
+exemple <span class="SpellE">pesq</span>&nbsp;:<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span></span><span class="SpellE"><b><span style="font-size:11.0pt;font-family:
+&quot;Courier New&quot;">gcc</span></b></span><b><span style="font-size:11.0pt;
+font-family:&quot;Courier New&quot;"> -lm -o <span class="SpellE">pesq</span> *.c</span></b>
+&nbsp;&nbsp;(En fonction de votre compilateur, vous pouvez avoir des erreurs mineures
+qu'on peut corriger facilement en modifiant les codes sources).
+<span style="mso-bidi-font-size:10.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>12.1 - Exécutez le programme (<span class="GramE"><b>.</b><b><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">/</span></b></span></span><span class="SpellE"><b><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">pesq</span></b></span><span style="mso-bidi-font-size:10.0pt">). Quelle est la signification de l’option
++8000 et +16000&nbsp;? <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>12.2 - Quelle(s) valeur(s) faut-il choisir
+pour tester les fichiers audio <span class="SpellE">conform</span>/u_am1s01.wav, <span class="SpellE">conform</span>/u_am1s01b2c8.wav et <span class="SpellE">conform</span>/u_am1s01b2c1.wav&nbsp;?
+(+8000 ou +16000)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>12.3 - <i>Facultatif</i> : Vérifiez que la valeur  choisie est en
+cohérence avec la durée de l’audio, la taille du fichier audio et le codage
+utilisé, en vérifiant que&nbsp;:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>La durée du contenu audio =<span style="mso-spacerun:yes">&nbsp; </span>taille du fichier audio<span style="mso-spacerun:yes">&nbsp; </span>/<span style="mso-spacerun:yes">&nbsp;
+</span>débit du codec audio<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Débit du codec audio = fréquence
+d’échantillonnage<span style="mso-spacerun:yes">&nbsp; </span>x<span style="mso-spacerun:yes">&nbsp; </span>taille d’un échantillon</span><span style="mso-bidi-font-size:10.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt">Comparez les durées obtenues
+avec les valeurs affichées par le logiciel audio et/ou l’explorateur de
+fichiers. Testez par exemple les fichiers&nbsp;<span class="GramE">:<span style="mso-spacerun:yes">&nbsp; </span><i><span lang="EN-US" style="font-size:10.0pt;
+mso-ansi-language:EN-US">u</span></i></span></span><i><span lang="EN-US" style="font-size:10.0pt;mso-ansi-language:EN-US">_am1s02.wav</span></i><span style="mso-bidi-font-size:10.0pt"><span style="mso-spacerun:yes">&nbsp;
+</span>et<span style="mso-spacerun:yes">&nbsp; </span></span><i><span lang="EN-US" style="font-size:10.0pt;mso-ansi-language:EN-US">u_am1s01.wav </span></i><span lang="EN-US" style="font-size:10.0pt;mso-ansi-language:EN-US">.</span><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;color:gray"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>12.4 - Utilisez maintenant le programme <span class="SpellE">pesq</span> afin d’obtenir les deux valeurs de MOS objectif
+relatives aux fichiers dégradés&nbsp;:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><i><span lang="EN-US" style="font-size:10.0pt;mso-ansi-language:
+EN-US">u_am1s01b2c8.wav </span></i><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt;color:gray"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><i><span lang="EN-US" style="font-size:10.0pt;mso-ansi-language:
+EN-US">u_am1s01b2c1.wav</span></i><span lang="EN-US" style="font-size:11.0pt;
+mso-bidi-font-size:12.0pt;color:gray;mso-ansi-language:EN-US"> </span><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;color:gray"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+color:gray"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>12.5 - Comparez les deux
+résultats obtenus avec ceux des deux questions 10 et 11.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoTitle"><a href="http://www.polqa.info/">POLQA</a></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.0pt"><span style="mso-spacerun:yes">&nbsp;</span>13 - L’ITU a approuvé récemment un nouvel
+algorithme d’estimation de la qualité audio perçue par les utilisateurs
+permettant pareillement de calculer un MOS objectif. Il s’agit de l’algorithme
+«&nbsp;<span class="SpellE">Perceptual</span> Objective <span class="SpellE">Listening</span>
+<span class="SpellE">Quality</span> <span class="SpellE">Prediction</span>&nbsp;»
+ou POLQA. Consultez le fichier <span class="SpellE">pdf</span> de la
+recommandation <a href="https://www.itu.int/rec/T-REC-P.863/fr" title="Page P.863 ITU">ITU P.863</a>&nbsp;et trouvez dans quels cas on devrait
+utiliser POLQA au lieu de PESQ.</span><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt;color:gray"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoTitle">MOS subjectif</p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">Consultez maintenant le document <a href="https://www.itu.int/rec/T-REC-P/fr" title="Page de la série P">P.830 de
+l’ITU</a>.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-size:
+10.0pt">15 - Lors des tests de la question 10 et 11, est-ce que nous avons
+respecté les conditions de test préconisées par la recommandation P.830&nbsp;?
+En particulier, vérifiez celles relatives à la durée des séquences audio et le
+nombre de locuteurs.<o:p></o:p></span></p>
+
+<div style="mso-element:para-border-div;border:none;border-bottom:solid windowtext 1.5pt;
+padding:0cm 0cm 1.0pt 0cm">
+
+<p class="MsoNormal" style="text-align:justify;border:none;mso-border-bottom-alt:
+solid windowtext 1.5pt;padding:0cm;mso-padding-alt:0cm 0cm 1.0pt 0cm"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<p class="MsoNormal"><span style="color:#BFBFBF"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><i><u><span style="font-size:16.0pt;color:red">Procédure
+d’envoi de votre <span class="SpellE">comptre</span> rendu de TME&nbsp;:</span></u></i><span style="font-size:16.0pt;color:red"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:14.0pt">Nommez le fichier de votre
+compte rendu <span style="color:#3333FF">TME1_<i>NOM1_NOM2</i>.pdf</span>, avec
+<i><span style="color:#3333FF">NOM1_NOM2</span> </i><span style="mso-spacerun:yes">&nbsp;</span>les noms des deux binômes. <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:14.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:14.0pt">Envoyez le fichier <span class="SpellE">pdf</span> à <a href="mailto:Naceur%20Malouch%20%3cNaceur.Malouch@lip6.fr%3e?subject=[ITQoS]%20Compte%20rendu%20TME%201%20de%20%3e%3e%3e%20mettez%20ici%20vos%20NOMS%20%3c%3c%3c&amp;body=Rattachez%20votre%20compte%20rendu%20comme%20pi%C3%A8ce%20jointe%20au%20format%20pdf%0d%0a%0d%0a">Naceur.Malouch@lip6.fr</a>
+<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:14.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:16.0pt">Le sujet de l’email doit
+être&nbsp;:</span><span style="font-size:14.0pt"> <span style="color:blue">[<span class="SpellE">ITQoS</span>] Compte rendu TME 1 de NOM1 et NOM2</span></span></p>
+
+<div style="mso-element:para-border-div;border:none;border-bottom:solid windowtext 1.5pt;
+padding:0cm 0cm 1.0pt 0cm">
+
+<p class="MsoNormal" style="text-align:justify;border:none;mso-border-bottom-alt:
+solid windowtext 1.5pt;padding:0cm;mso-padding-alt:0cm 0cm 1.0pt 0cm"><span style="mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<p class="MsoNormal" align="right" style="text-align:right">Fin&nbsp;!</p>
+
+</div>
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
